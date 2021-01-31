@@ -22,6 +22,7 @@ public class ProjectDetailsController {
     @ApiOperation("获取回报详情")
     @GetMapping("/getReturnByRid")
     public AppResponse<TReturn> getReturnByRid(Integer rid){
+        System.out.println("3333333333");
         TReturn tReturn = projectService.getReturnByRid(rid);
         return AppResponse.ok(tReturn);
     }
