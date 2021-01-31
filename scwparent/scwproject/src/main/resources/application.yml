@@ -1,0 +1,30 @@
+server:
+  port: 8000
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/atcrowdfunding?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: 192.168.188.146
+    port: 6379
+  application:
+    name: SCWPROJECT
+mybatis:
+  mapper-locations: classpath:com/offcn/project/mapper/*.xml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    appname: SCWPROJECT
+    prefer-ip-address: true
+
+oss:
+  endpoint: http://oss-cn-guangzhou.aliyuncs.com
+  bucketDomain: cs0907.oss-cn-guangzhou.aliyuncs.com
+  accessKeyId: LTAI4GJaLPKU1nfkSV19PTV1
+  accessKeySecret: 6l9bA2AlRHJ5KEPKfEIJLl1mY2wBDt
+  bucketName: cs0907
